@@ -82,7 +82,6 @@ namespace ModelBindingStyling_Lab.Controllers
                 Email = "First.Programmer@gmail.com",
                 FullName = "Ada Lovelace",
                 GitHubUrl = "https://github.com/Octocat",
-                ImageUrl = "https://via.placeholder.com/150",
                 PhoneNumber = "(253) 555-1234",
                 UserProfileId = 10,
                 SkilledLanguages = new List<string> { "C#", "Java", "C++" }
