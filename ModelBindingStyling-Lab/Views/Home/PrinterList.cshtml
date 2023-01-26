@@ -6,47 +6,18 @@
 
 <h1>PrinterList</h1>
 
-<table class="table printerList">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.SKU)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BuildVolume)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PrinterImage)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+    <div class="printerlist">
 @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SKU)
-            </td>
-            <td >
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BuildVolume)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrinterImage)
-                    <img src="https://via.placeholder.com/150" class="img-thumbnail" alt="printer">
-            </td>
-        </tr>
+        <div class="card-text-center">
+            <div class="card-header">
+              <img src="@Html.DisplayFor(modelItem => item.PrinterImage)" class="card-img-top" alt="">  
+              <ul class="list-group list-group-flush">
+                    <li class="list-group-item" @Html.DisplayFor(modelItem => item.SKU)></li>
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Title)</li>
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Price)</li>
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.BuildVolume)</li>
+              </ul>
+            </div>
+        </div>  
 }
-    </tbody>
-</table>
+    </div>
